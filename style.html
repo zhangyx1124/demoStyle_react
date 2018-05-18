@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>样式</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+
+<div>
+	<div class="city">
+  		<div>上海</div>
+	</div>
+	<div class="city2"></div>
+</div> 
+
+
+
+<div class="test">
+	<div class="div6">
+		<div class="cut_left_bottom"></div>
+	    <div class="content">这是内容</div>
+		<div class="cut_right_top"></div>
+		<em class="emf"></em>
+		<em class="ems"></em>
+		<em class=eml></em>
+	</div>
+	<div class="div6_bg">
+		<div class="cut_left_bottom"></div>
+		<div class="cut_right_top"></div>
+	</div>
+</div>
+
+
+
+<style>
+         /* -webkit-box-reflect:below -10px;倒影 */
+   body{
+	background-color: rgb(12,23,51);
+}
+.city {
+  display: inline-block;
+  padding: 5px 20px;
+  border: 2px solid rgba(43,74,118,0.8);
+  color: rgb(144,206,231);
+  transform: skew(-20deg);
+  border-radius: 0 10px 0 10px;
+  /* box-shadow: 4px 2px 0px rgba(43,74,118,0.8);  */
+ 
+
+}
+.city:after{
+	 content: ' ';
+	 width: 100px;
+        border: 1px solid red;
+        position: absolute;
+}
+.city2 {
+      position: relative;
+    display: inline-block;
+    border: 2px solid rgba(43,74,118,0.4);
+    color: rgb(144,206,231);
+    transform: skew(-20deg);
+    border-radius: 0 10px 0 10px;
+    width: 75px;
+    height: 30px;
+    left: -75px;
+    top: 20px;
+    z-index: -10;}
+ /* 我们的确是把整个 div 进行了歪曲，导致中间的文字也是倾斜的，所以我们需要加一个内层元素，并对内层元素做一次逆向的歪曲 */
+.city div {
+  transform: skew(20deg);
+} 
+
+.test{margin: 100px;}
+.div6 {
+	
+        width: 160px;
+        height: 40px;
+        line-height: 40px;
+        background:rgba(14,28,63,0.7);
+        color: rgba(144,206,231,0.6);
+        padding: 5px 15px;
+        text-align: center;
+        position: relative;
+        /* border: 2px solid rgba(43,74,118,0.8); */
+        box-shadow: 0 0 5px rgba(144,206,231,0.8);
+         transform: skew(-45deg);
+         
+    }
+ .div6_bg{
+    	
+    	width: 160px;
+        height: 40px;
+        line-height: 40px;
+        background:rgba(14,28,63,0.8);
+        
+        padding: 5px 15px;
+        text-align: center;
+        position: relative;
+        /* border: 2px solid rgba(43,74,118,0.8); */
+        box-shadow: 0 0 5px rgba(144,206,231,0.4);
+         transform: skew(-45deg);
+         left: 5px;
+         top:-45px;
+         z-index: -10;
+    }
+    .div6 > .content {
+  transform: skew(45deg);
+}
+/* 切掉右上角和左下角 */
+    .cut_right_top:before {
+        content: ' ';
+        border: 10px solid transparent;
+        position: absolute;
+        border-top-color: rgba(43,74,118,0.8);
+        border-right-color: rgba(43,74,118,0.8);
+        right: 0px;
+        top: 0px;
+    }
+    .cut_right_top:after {
+        content: ' ';
+        border: solid transparent;
+        position: absolute;
+        border-width: 14px;
+        border-top-color: rgba(13,25,51,1);
+        border-right-color: rgba(13,25,51,1);
+        top: -4px;
+        right: -6px;
+    }
+  
+    .cut_left_bottom:before {
+        content: ' ';
+        border: 10px solid transparent;
+        position: absolute;
+        border-bottom-color: rgba(43,74,118,0.8);
+        border-left-color: rgba(43,74,118,0.8);
+        left: 0px;
+        top: 30px;
+    }
+     .cut_left_bottom:after {
+       content: ' ';
+        border: solid transparent;
+        position: absolute;
+        border-width: 14px;
+        border-left-color:rgba(13,25,51,1);
+	    border-bottom-color: rgba(13,25,51,1);
+	    top: 26px;
+	    left: -6px;
+	    }
+
+
+   .box{  
+    position: relative;  
+    box-shadow: 0 0 10px #FFF;  
+}
+/*反光效果 */
+.emf{left: 40px;opacity: 0.8}
+.ems{left: 80px;}
+.eml{left: 120px;opacity: 0.8}  
+em{  
+    position: absolute;  
+    
+    top: 0;  
+    width: 40px;  
+    height: 50px;  
+    background-image: -moz-linear-gradient(0deg,rgba(47,78,125,0),rgba(47,78,125,0.4),rgba(47,78,125,0));  
+    background-image: -webkit-linear-gradient(0deg,rgba(47,78,125,0),rgba(47,78,125,0.4),rgba(47,78,125,0));  
+    z-index: -8;
+    transform: skewx(-25deg);  
+    -o-transform: skewx(-25deg);  
+    -moz-transform: skewx(-25deg);  
+    -webkit-transform: skewx(-25deg);  
+} 
+ /*鼠标放上去字体渐渐清晰  */
+.div6:hover{  
+    color: rgba(144,206,231,1);
+    -moz-transition:0.5s;  
+    -o-transition:0.5s;  
+    -webkit-transition:0.5s;  
+    transition:0.5s;  
+}   
+ */
+    
+</style>
+
+</body>
+</html>

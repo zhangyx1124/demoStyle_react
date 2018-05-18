@@ -1,0 +1,135 @@
+@import "variables";
+@import "global";
+@import "scroll";
+@import "table";
+@import "login";
+@import "icons";
+@import "button";
+@import "modal";
+@import "menu";
+@import "banner";
+@import "card";
+@import "img";
+@import "utils-text";
+@import "utils-color";
+@import "utils-size";
+@import "utils-border";
+@import "utils-spacing";
+#root{
+  height: 100%;
+}
+.ant-layout{
+  height: 100%;
+  background:rgb(12,23,51);
+  .logo{
+    height: 32px;
+    background: #333;
+    border-radius: 6px;
+    margin: 16px;
+  }
+  .ant-layout-sider-collapsed{
+    .anticon{
+      font-size: 16px;
+      margin-left: 8px;
+    }
+    .nav-text{
+      display: none;
+    }
+    .ant-menu-submenu-vertical > .ant-menu-submenu-title:after{
+      display: none;
+    }
+    .ant-menu-dark:not(.ant-menu-inline) .ant-menu-submenu-open {
+      color: inherit;
+    }
+  }
+  p {
+    margin: 10px 0 10px 0;
+  }
+}
+.gutter-example{
+.ant-breadcrumb,.ant-breadcrumb-separator,.ant-breadcrumb > span:last-child{color:#9bb1bc;}
+  .ant-row{
+    //margin-left: 0 !important;
+    //margin-right: 0 !important;
+    >div{
+      background: transparent;
+      border: 0;
+    }
+  }
+  .ant-breadcrumb a{
+            color:rgb(155, 177, 188);
+            &:hover{color:#fff;}
+          }
+}
+.gutter-box {
+  padding: 5px 0;
+  .ant-card{
+      margin-top:20px;
+      color:#fff;
+      background:#0c1733;
+      h2,h3,h4,h5{color:#fff;}
+      .ant-card-body{
+        border: 1px solid rgba(43,74,118,0.8);
+        border-radius: 15px;
+        overflow:hidden;
+        .clear{
+          a{
+            color:rgb(155, 177, 188);
+            &:hover{color:#fff;}
+          }
+        }
+      }
+      .ant-timeline{color:rgba(255,255,255,0.8)}
+      .text-muted {
+        opacity: 1;
+        width:80px;
+        height:30px;
+        padding: 5px 0px;
+        transform: skew(-20deg);
+        text-align:center;
+        position: absolute;
+        top: -15px;
+        &:hover{opacity:0.8}
+       
+        div{
+          transform: skew(20deg);
+        }
+        &:before{
+          content:'';
+          width:80px;
+          height:30px;
+          position:absolute;
+          border:1px solid rgb(41, 99, 169);
+          top:5px;
+          left:5px;
+          background: #01274a;
+          opacity:0.8;
+          border-radius: 0 10px 0 10px;
+          z-index:-2;
+        }
+        &:after{
+          content:'';
+          width:80px;
+          height:30px;
+          position:absolute;
+          border:1px solid rgb(41, 99, 169);
+          top:0px;
+          left:0px;
+          background: #01274a;
+          opacity:0.7;
+          border-radius: 0 10px 0 10px;
+          z-index:-1;
+          background-image: -moz-linear-gradient(0deg,rgba(47,78,125,0),rgba(47,78,125,0.4),rgba(47,78,125,0));  
+    background-image: -webkit-linear-gradient(0deg,rgba(47,78,125,0),rgba(47,78,125,0.4),rgba(47,78,125,0)); 
+
+        }
+      }
+     
+  }
+}
+
+:global {
+  .ant-card-head-title {
+    font-size: 14px !important;
+  }
+}
